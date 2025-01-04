@@ -47,15 +47,24 @@ const App = () => {
       {loading && <p>Loading data…</p>}
       {error && <p className="error">{error}</p>}
       {weather && (
-        <div className="weather-cards">
-          <div className="weather-card">
-            <p><strong>Temperature:</strong> {weather.current.temp_c} °C</p>
-            <p><strong>Humidity:</strong> {weather.current.humidity} %</p>
-            <p><strong>Condition:</strong> {weather.current.condition.text}</p>
-            <p><strong>Wind Speed:</strong> {weather.current.wind_kph} kph</p>
-          </div>
-        </div>
-      )}
+  <div className="weather-cards">
+    {/* <div className="weather-card"> */}
+      <div className="weather-item">
+        <div><strong>Temperature</strong></div><div> {weather.current.temp_c} °C</div>
+      </div>
+      <div className="weather-item">
+        <div><strong>Humidity</strong></div><div> {weather.current.humidity} %</div>
+      </div>
+      <div className="weather-item">
+        <div><strong>Condition:</strong></div><div> {weather.current.condition.text}</div>
+      </div>
+      <div className="weather-item">
+        <div><strong>Wind Speed:</strong></div><div> {weather.current.wind_kph} kph</div>
+      </div>
+    {/* </div> */}
+  </div>
+)}
+
     </div>
   );
 };
