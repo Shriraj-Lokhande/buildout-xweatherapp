@@ -26,8 +26,8 @@ const App = () => {
       },
     })
     .then(response => {
-      setWeather(response.data);
       setLoading(false);
+      setWeather(response.data);
     })
     .catch(() => {
       setLoading(false);
@@ -49,16 +49,16 @@ const App = () => {
       {weather && (
   <div className="weather-cards">
     {/* <div className="weather-card"> */}
-      <div className="weather-item" >
+      <div className="weather-card" >
         <div><strong>Temperature</strong></div><div> {weather.current.temp_c} °C</div>
       </div>
-      <div className="weather-item">
+      <div className="weather-card">
         <div><strong>Humidity</strong></div><div> {weather.current.humidity} %</div>
       </div>
-      <div className="weather-item">
+      <div className="weather-card">
         <div><strong>Condition</strong></div><div> {weather.current.condition.text}</div>
       </div>
-      <div className="weather-item">
+      <div className="weather-card">
         <div><strong>Wind Speed</strong></div><div> {weather.current.wind_kph} kph</div>
       </div>
     {/* </div> */}
