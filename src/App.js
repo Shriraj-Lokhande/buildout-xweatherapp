@@ -56,10 +56,10 @@ const App = () => {
         <div><strong>Humidity</strong></div><div> {weather.current.humidity} %</div>
       </div>
       <div className="weather-item">
-        <div><strong>Condition:</strong></div><div> {weather.current.condition.text}</div>
+        <div><strong>Condition</strong></div><div> {weather.current.condition.text}</div>
       </div>
       <div className="weather-item">
-        <div><strong>Wind Speed:</strong></div><div> {weather.current.wind_kph} kph</div>
+        <div><strong>Wind Speed</strong></div><div> {weather.current.wind_kph} kph</div>
       </div>
     {/* </div> */}
   </div>
